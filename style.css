@@ -1,0 +1,155 @@
+:root {
+	/* Primary */
+
+	/* (main background) */
+	--very-dark-blue: hsl(233, 47%, 7%);
+
+	/* (card background) */
+	--dark-desaturated-blue: hsl(244, 38%, 16%);
+
+	/* (accent) */
+	--soft-violet: hsl(277, 64%, 61%);
+
+	/* Neutral */
+	/* (mainheading,stats) */
+	--white: hsl(0, 0%, 100%);
+
+	/* (main paragraph) */
+	--slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+
+	/* (stat headings) */
+	--slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+	background-color: var(--very-dark-blue);
+	font-family: 'Inter', sans-serif;
+}
+
+/* font-family: 'Inter', sans-serif; */
+
+/* font-family: 'Lexend Deca', sans-serif; */
+
+.main {
+	width: 300px;
+	/* border: 2px solid red; */
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.main-header-container__img {
+	width: 100%;
+	z-index: -1;
+	/* filter: hue-rotate(270deg); */
+	/* filter: ; */
+}
+
+.main-header-container__filter {
+	width: 500px;
+	height: 401px;
+	position: absolute;
+	background-color: hsla(277, 89%, 28%, 0.571);
+	top: 160px;
+	border-radius: 0 10px 10px 0;
+}
+
+@media (min-width: 720px) {
+	.main {
+		width: 1000px;
+		display: flex;
+		flex-direction: row-reverse;
+		margin-top: 160px;
+		/* margin-bottom: auto; */
+	}
+
+	.main-header-container__img {
+		height: 100%;
+		width: 500px;
+	}
+}
+
+.hook {
+	text-align: center;
+	padding: 20px;
+	background-color: var(--dark-desaturated-blue);
+}
+
+.hook-titles__title {
+	font-size: 25px;
+	color: var(--white);
+}
+
+.purple-accent {
+	color: var(--soft-violet);
+}
+
+.hook-titles__para {
+	font-size: 15px;
+	color: var(--slightly-transparent-white);
+}
+
+@media (min-width: 720px) {
+	.hook {
+		padding: 50px;
+		width: 500px;
+		text-align: left;
+	}
+
+	.hook-titles__title {
+		font-size: 35px;
+	}
+
+	.hook-titles__para {
+		width: 350px;
+	}
+}
+.stats {
+	/* border: 2px solid green; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.stats__companies,
+.stats__templates,
+.stats__queries {
+	width: 80px;
+	font-size: 10px;
+	/* border: 2px solid blue; */
+	color: var(--slightly-transparent-white);
+}
+
+.bold-white-text {
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 20px;
+	color: white;
+}
+
+@media (min-width: 720px) {
+	.stats {
+		flex-direction: row;
+		/* border: 2px solid green; */
+		justify-content: space-around;
+		margin-top: 50px;
+		padding: 0;
+	}
+
+	.stats__companies,
+	.stats__templates,
+	.stats__queries {
+		font-size: 11px;
+	}
+
+	.bold-white-text {
+		font-size: 23px;
+	}
+}
+
+.attribution {
+	position: absolute;
+	bottom: 0;
+	color: white;
+	text-decoration: lightskyblue;
+}
